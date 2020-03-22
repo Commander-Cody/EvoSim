@@ -1,6 +1,6 @@
 import unittest
-from TestCaseExtension import TestCaseExtension
-from src.EvoSim import main
+from TestUtil.TestCaseExtension import TestCaseExtension
+from EvoSim import main
 
 
 class EvoSimTest(TestCaseExtension):
