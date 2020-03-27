@@ -7,15 +7,9 @@ class Simple2DEnvironment:
         # range: 0, x_size-1
         self.xSize = x_size
         self.ySize = y_size
-        self.specialPoints = {}
 
     def generate(self):
         pass
-
-    def is_obstructed(self, location):
-        if location.get_coordinates() in self.specialPoints:
-            return True
-        return False
 
     def update(self):
         pass
