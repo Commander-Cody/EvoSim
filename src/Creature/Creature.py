@@ -2,11 +2,12 @@ from Creature.Genetics.AbstractGene import AbstractGene
 
 
 class Creature:
-    gene_type = AbstractGene
+    base_gene_type = AbstractGene
 
     def __init__(self, genetic_makeup=None):
-        assert isinstance(genetic_makeup, self.gene_type)
-        self.geneticMakeup = genetic_makeup if genetic_makeup else self.gene_type()
+        genetic_makeup = genetic_makeup if genetic_makeup else self.base_gene_type()
+        assert isinstance(genetic_makeup, self.base_gene_type)
+        self.geneticMakeup = genetic_makeup
 
     def reproduce(self):
         return Creature(self._replicate_genetic_makeup())
