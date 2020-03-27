@@ -1,5 +1,5 @@
 from Creature.Genetics.AbstractGene import AbstractGene
-from Util.GeneUtil import flip_bit, get_random_positive_int, chance_allowed, get_bits
+from Util.RandomUtilities import flip_bit, get_random_positive_int, chance_allowed, get_bits
 
 
 class SimpleRandomGene(AbstractGene):
