@@ -1,4 +1,5 @@
 import unittest
+
 from TestUtil.TestCaseExtension import TestCaseExtension
 from EvoSim import main
 
