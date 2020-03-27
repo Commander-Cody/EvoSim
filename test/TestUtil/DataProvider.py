@@ -1,4 +1,17 @@
 class DataProvider:
+    """
+    Decorator for unittest tests
+
+    Usage example:
+
+    @staticmethod
+    def data():
+        return (x1, y1), (x2, y2)
+
+    @DataProvider("data")
+    def test_with_data(self, x, y):
+        self.assertEqual(x, y)
+    """
     def __init__(self, data_provider_name):
         self.data_provider = data_provider_name
 
