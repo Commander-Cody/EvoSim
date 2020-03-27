@@ -27,8 +27,8 @@ class _Simple2DEnvironmentIterator:
         self.env = env
         self.x_size = x
         self.y_size = y
-        self.x_iter = self.get_x_iterator()
-        self.y_iter = self.get_y_iterator()
+        self.x_iter = self._get_x_iterator()
+        self.y_iter = self._get_y_iterator()
         self.current_loc: Location2D = None
 
     def __iter__(self):
@@ -41,18 +41,24 @@ class _Simple2DEnvironmentIterator:
             try:
                 self.current_loc = Location2D(next(self.x_iter), self.current_loc.y)
             except StopIteration:
-                self.x_iter = self.get_x_iterator()
+                self.x_iter = self._get_x_iterator()
                 self.current_loc = Location2D(next(self.x_iter), next(self.y_iter))
 
-        remaining_x = self.env.xSize - self.current_loc.x
-        remaining_y = self.env.ySize - self.current_loc.y
-        return Area(self.current_loc, min(self.x_size, remaining_x), min(self.y_size, remaining_y))
+        return Area(self.current_loc, self._get_current_area_x_extent(), self._get_current_area_y_extent())
 
-    def get_x_iterator(self):
+    def _get_x_iterator(self):
         return iter(range(0, self.env.xSize, self.x_size))
 
-    def get_y_iterator(self):
+    def _get_y_iterator(self):
         return iter(range(0, self.env.ySize, self.y_size))
+
+    def _get_current_area_x_extent(self):
+        remaining_x = self.env.xSize - self.current_loc.x
+        return min(self.x_size, remaining_x)
+
+    def _get_current_area_y_extent(self):
+        remaining_y = self.env.ySize - self.current_loc.y
+        return min(self.x_size, remaining_y)
 
 
 class Area:
