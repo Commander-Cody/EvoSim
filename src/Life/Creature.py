@@ -1,4 +1,4 @@
-from Creature.Genetics.AbstractGene import AbstractGene
+from Life.Genetics.AbstractGene import AbstractGene
 
 
 class Creature:

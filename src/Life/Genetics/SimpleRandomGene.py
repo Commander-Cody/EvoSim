@@ -1,4 +1,4 @@
-from Creature.Genetics.AbstractGene import AbstractGene
+from Life.Genetics.AbstractGene import AbstractGene
 from Util.RandomUtilities import flip_bit, get_random_positive_int, chance_allowed, get_bits
 
 

@@ -1,6 +1,6 @@
 import unittest
 
-from Creature.Genetics.SimpleRandomGene import SimpleRandomGene
+from Life.Genetics.SimpleRandomGene import SimpleRandomGene
 
 
 class SimpleRandomGeneTest(unittest.TestCase):

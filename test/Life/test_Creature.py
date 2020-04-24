@@ -1,7 +1,7 @@
 import unittest
 
-from Creature.Creature import Creature
-from Creature.Genetics.SimpleRandomGene import SimpleRandomGene
+from Life.Creature import Creature
+from Life.Genetics.SimpleRandomGene import SimpleRandomGene
 from TestUtil.TestCaseExtension import TestCaseExtension
 
 

@@ -1,5 +1,5 @@
-from Creature.Creature import Creature
-from Creature.Genetics.SimpleRandomGene import SimpleRandomGene
+from Life.Creature import Creature
+from Life.Genetics.SimpleRandomGene import SimpleRandomGene
 from Environment.Simple2DEnvironment import Simple2DEnvironment
 from Util.RandomUtilities import chance_allowed
 
