@@ -1,6 +1,6 @@
 from Environment.Simple2DEnvironment import Simple2DEnvironment
 from History.History import History
-from Life.ProtoLifeform import ProtoLifeForm
+from Life.ProtoLifeForm import ProtoLifeForm
 from Util.RandomUtilities import chance_allowed
 
 

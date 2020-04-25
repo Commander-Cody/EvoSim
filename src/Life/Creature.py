@@ -1,7 +1,8 @@
+from Life.AbstractLifeForm import AbstractLifeForm
 from Life.Genetics.AbstractGene import AbstractGene
 
 
-class Creature:
+class Creature(AbstractLifeForm):
     base_gene_type = AbstractGene
 
     def __init__(self, genetic_makeup=None):
